@@ -1,0 +1,193 @@
+
+
+.item-cart{
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    background: #fff;
+    box-shadow: 0px 5px 12px #0000001a;
+
+    .cart-title{
+        color: #fff;
+        background: #f7c2c9;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding: 15px 0;
+    }
+
+    .cart-img{
+        width: 100%;
+    }
+
+    .cart-content{
+        ul{
+            li{
+                list-style-type: none;
+                position: relative;
+                font-size: 16px;
+                padding: 14px 0;
+
+                &::before {
+                    content: ''; 
+                    background-image: url('../../asset/accept-svgrepo-com.svg'); 
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    left: -20px;
+                    top: 50%;
+                    transform: translateY(-50%); 
+                }
+            }
+        }
+
+    }
+    .cart-buy{
+        display: flex;
+        flex-direction:column;
+        background: #f0f3ee;
+        padding: 20px 20px;
+    }
+
+
+
+    .cart-cost{
+        display: flex;
+        justify-content: space-evenly;
+        padding:20px 0px ;
+        
+        .cost-icon{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &_case{
+            display: flex;
+            flex-direction: column;
+
+            span{
+                &:first-child{
+                    font-size: 12px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                &:last-child{
+                    font-size: 36px;
+                    font-weight: 500;
+                    span{
+                        text-decoration: line-through
+                    }
+                }
+            }
+
+            &:last-child{
+                span{
+                    &:last-child{
+                       color: rgb(255, 192, 2);
+                    }
+                }
+            }
+        }
+    }
+
+    .cart-time{
+        display: flex;
+        justify-content: space-evenly;
+        &_box{
+            display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-width: 60px;
+                background-color: #f04165;
+                padding: 5px;
+                border-radius: 5px;
+
+            &>span{
+                color:#ffffff;
+            }
+
+            &>span:first-child{
+                font-size: 24px;
+            }
+
+            &>span:last-child{
+                
+                font-size: 12px;
+            }
+        }
+    }
+
+    .buy-button{
+        text-transform: uppercase;
+        color: #fff;
+        background:'#ffbc1a';
+        padding: 10px 50px;
+        -webkit-box-shadow: inset 0px -4px 12px 0px rgba(0, 0, 0, 0.2),;
+        -moz-box-shadow: inset 0px -4px 12px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0px -4px 12px 0px rgba(0, 0, 0, 0.2), 0px -4px 12px 0px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media(max-width:350px){
+    .item-cart{
+        .cart-buy{
+            .cart-time{
+                &_box{
+                    max-width: 37px;
+                    &>span:first-child{
+                        font-size: 19px;
+                    }
+        
+                    &>span:last-child{
+                        
+                        font-size: 9px;
+                    }
+                }
+            }
+
+            .cart-cost{
+                .cost-icon{
+                    img{
+                        width: 24px;
+                    }
+                }
+                &_case{
+                    span{
+                        &:first-child{
+                            font-size: 9px;
+
+                        }
+        
+                        &:last-child{
+                            font-size: 24px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:330px){
+    .item-cart{
+        .cart-buy{
+            .buy-button{
+                padding: 10px 10px;
+            }
+        }
+    }
+
+}
+
+@media(max-width:310px){
+    .item-cart{
+        .cart-title{
+            font-size: 20px;
+        }
+    }
+}
